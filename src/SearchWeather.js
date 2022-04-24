@@ -30,26 +30,25 @@ export default function SearchWeather(props) {
     <div>
       <form
         id="form-size"
-        className="d-flex g-3 mb-2 justify-content-center"
+        className="row justify-content-start"
         onSubmit={handleSubmit}
       >
-        <div className="me-1">
+        <div className="col-9">
           <input
             type="search"
             className="form-control"
             placeholder="Type the city"
           ></input>
         </div>
-        <div className="ms-1">
+        <div className="col-2">
           <button
             type="submit"
-            className="btn btn-primary justify-content-md-end"
+            className="btn btn-success justify-content-md-end"
           >
             Search
           </button>
         </div>
       </form>
-      <br />
       <ShowTemperature
         city={city}
         temperature={temperature}
