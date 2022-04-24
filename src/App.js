@@ -1,4 +1,3 @@
-import Weather from "./Weather";
 import "./App.css";
 import SearchWeather from "./SearchWeather";
 import ShowTemperature from "./ShowTemperature";
