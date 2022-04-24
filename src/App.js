@@ -28,6 +28,17 @@ function App() {
           </div>
         </div>
       </div>
+      <div class="row mt-1 mb-5">
+        <div class="text-center">
+          <a
+            href="https://github.com/XENIAAPavlova/weather-app-react"
+            target="_blank"
+          >
+            Open-source code
+          </a>{" "}
+          by Xenia P.{" "}
+        </div>
+      </div>
     </div>
   );
 }
