@@ -28,31 +28,31 @@ export default function ShowTemperature(props) {
         </div>
       </div>
 
-      <div class="row mt-5 mb-2 justify-content-center">
-        <div class="col-sm-2">
-          <div class="forecast-day">Fri</div>
+      <div className="row mt-5 mb-2 justify-content-center">
+        <div className="col-sm-2">
+          <div className="forecast-day">Fri</div>
           <Icon type="sunny" />
-          <div class="forecast-temperature">14°</div>
+          <div className="forecast-temperature">14°</div>
         </div>
-        <div class="col-sm-2">
-          <div class="forecast-day">Sat</div>
+        <div className="col-sm-2">
+          <div className="forecast-day">Sat</div>
           <Icon type="foggy" />
-          <div class="forecast-temperature">14°</div>
+          <div className="forecast-temperature">14°</div>
         </div>
-        <div class="col-sm-2">
-          <div class="forecast-day">Sun</div>
+        <div className="col-sm-2">
+          <div className="forecast-day">Sun</div>
           <Icon type="rainy" />
-          <div class="forecast-temperature">8°</div>
+          <div className="forecast-temperature">8°</div>
         </div>
-        <div class="col-sm-2">
-          <div class="forecast-day">Mon</div>
+        <div className="col-sm-2">
+          <div className="forecast-day">Mon</div>
           <Icon type="rainy" />
-          <div class="forecast-temperature">7°</div>
+          <div className="forecast-temperature">7°</div>
         </div>
-        <div class="col-sm-2">
-          <div class="forecast-day">Tue</div>
+        <div className="col-sm-2">
+          <div className="forecast-day">Tue</div>
           <Icon type="sunny" />
-          <div class="forecast-temperature">11°</div>
+          <div className="forecast-temperature">11°</div>
         </div>
       </div>
     </div>
