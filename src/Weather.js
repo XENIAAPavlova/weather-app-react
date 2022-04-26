@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import axios from "axios";
-import SearchWeather from "./SearchWeather";
 import ShowTemperature from "./ShowTemperature";
 
 export default function Weather() {
