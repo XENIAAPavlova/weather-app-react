@@ -12,10 +12,24 @@ export default function Weather() {
 
   function handleSubmit(event) {
     event.preventDefault();
+    const apiKey = "dcfba56f795371b9b39f70882499c480";
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(url).then(handleApiResponse);
   }
 
   function updateCity(event) {
     setCity(event.target.value);
+  }
+
+  function handleApiResponse(response) {
+    console.log(response);
+    setCity(response.data.name);
+    setTemperature(response.data.main.temp);
+    setDescription(response.data.weather[0].description);
+    setHumidity(response.data.main.humidity);
+    setWind(response.data.wind.speed);
+
+    setReady(true);
   }
 
   if (ready) {
@@ -41,6 +55,7 @@ export default function Weather() {
                                   type="search"
                                   className="form-control"
                                   placeholder="Type the city"
+                                  onChange={updateCity}
                                 ></input>
                               </div>
                               <div className="col-2">
@@ -74,16 +89,7 @@ export default function Weather() {
   } else {
     const apiKey = "dcfba56f795371b9b39f70882499c480";
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-    axios.get(url).then(function (response) {
-      console.log(response);
-      setCity(response.data.name);
-      setTemperature(response.data.main.temp);
-      setDescription(response.data.weather[0].description);
-      setHumidity(response.data.main.humidity);
-      setWind(response.data.wind.speed);
-
-      setReady(true);
-    });
+    axios.get(url).then(handleApiResponse);
     return "Loading...";
   }
 }
