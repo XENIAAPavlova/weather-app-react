@@ -8,20 +8,24 @@ export default function ShowTemperature(props) {
 
   return (
     <div className="weather-details">
-      <div className="detailed-current-weather">
-        <div className="row text-start">
+      <div className="detailed-current-weather text-center mt-4">
+        <div className="row text-center">
           <div className="col-sm-6 current-time">Thursday 16:24</div>
-          <div className="col-sm-6 weather-humidity">Humidity: 65 %</div>
+          <div className="col-sm-6 weather-humidity">
+            Humidity: {props.humidity} %
+          </div>
         </div>
-        <div className="row text-start mb-5">
-          <div className="col-sm-6 weather-summary text-capitalize">Clouds</div>
-          <div className="col-sm-6 current-time">Wind: 14 km/h</div>
+        <div className="row text-center mb-5">
+          <div className="col-sm-6 weather-summary text-capitalize">
+            {props.description}
+          </div>
+          <div className="col-sm-6 current-time">Wind: {props.wind} km/h</div>
         </div>
       </div>
       <div className="row weather-header align-items-center">
         <div className="col city-temp text-center">
-          <h1>Berlin </h1>
-          <h3> 13 °C </h3>
+          <h1>{props.city}</h1>
+          <h3>{Math.round(props.temperature)} °C </h3>
         </div>
         <div className="col-4 mb-2 weather-icon text-start">
           <Icon />
