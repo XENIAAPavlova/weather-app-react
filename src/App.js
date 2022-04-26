@@ -28,17 +28,19 @@ function App() {
           </div>
         </div>
       </div>
-      <div class="row mt-1 mb-5">
-        <div class="text-center">
-          <a
-            href="https://github.com/XENIAAPavlova/weather-app-react"
-            target="_blank"
-          >
-            Open-source code
-          </a>{" "}
-          by Xenia P.{" "}
+      <footer>
+        <div class="row mt-1 mb-5">
+          <div class="text-center">
+            This project was coded by Xenia and it's an{" "}
+            <a
+              href="https://github.com/XENIAAPavlova/weather-app-react"
+              target="_blank"
+            >
+              open-source code
+            </a>
+          </div>
         </div>
-      </div>
+      </footer>
     </div>
   );
 }
