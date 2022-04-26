@@ -35,6 +35,7 @@ function App() {
             <a
               href="https://github.com/XENIAAPavlova/weather-app-react"
               target="_blank"
+              rel="noreferrer"
             >
               open-source code
             </a>
