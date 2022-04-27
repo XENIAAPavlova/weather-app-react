@@ -4,6 +4,7 @@ import ShowTemperature from "./ShowTemperature";
 
 export default function Weather() {
   const [ready, setReady] = useState(false);
+  let [currentDate, setCurrentDate] = useState(null);
   let [city, setCity] = useState("Lisbon");
   let [temperature, setTemperature] = useState(null);
   let [description, setDescription] = useState(null);
@@ -23,6 +24,7 @@ export default function Weather() {
 
   function handleApiResponse(response) {
     console.log(response);
+    setCurrentDate(new Date(response.data.dt * 1000));
     setCity(response.data.name);
     setTemperature(response.data.main.temp);
     setDescription(response.data.weather[0].description);
@@ -50,7 +52,7 @@ export default function Weather() {
                               className="row justify-content-start"
                               onSubmit={handleSubmit}
                             >
-                              <div className="col-9">
+                              <div className="col-9 mb-5">
                                 <input
                                   type="search"
                                   className="form-control"
@@ -69,6 +71,7 @@ export default function Weather() {
                             </form>
                             <ShowTemperature
                               city={city}
+                              currentDate={currentDate}
                               temperature={temperature}
                               description={description}
                               humidity={humidity}
