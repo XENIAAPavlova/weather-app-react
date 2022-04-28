@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import ShowTemperature from "./ShowTemperature";
+import ShowWeather from "./ShowWeather";
 
 export default function Weather() {
   const [ready, setReady] = useState(false);
@@ -71,7 +71,7 @@ export default function Weather() {
                                 </button>
                               </div>
                             </form>
-                            <ShowTemperature
+                            <ShowWeather
                               city={city}
                               currentDate={currentDate}
                               temperature={temperature}
