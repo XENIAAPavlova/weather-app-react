@@ -9,13 +9,13 @@ export default function ShowTemperature(props) {
 
   return (
     <div className="weather-details">
-      <div className="row align-items-center main-current-weather">
+      <div className="row weather-header align-items-center main-current-weather">
         <div className="col mt-5 mb-3 city-temp text-center">
           <h1>{props.city}</h1>
           <h3>{Math.round(props.temperature)} °C </h3>
         </div>
         <div className="col-4 mb-2 weather-icon text-start">
-          <Icon />
+          <Icon icon={props.icon} size={80} color={"#4E944F"} />
         </div>
       </div>
       <div className="text-center mt-4 summary-current-weather">
@@ -37,27 +37,27 @@ export default function ShowTemperature(props) {
       <div className="row mt-5 mb-2 justify-content-center">
         <div className="col-sm-2">
           <div className="forecast-day">Fri</div>
-          <Icon type="sunny" />
+          <Icon icon={props.icon} size={52} />
           <div className="forecast-temperature">14°</div>
         </div>
         <div className="col-sm-2">
           <div className="forecast-day">Sat</div>
-          <Icon type="foggy" />
+          <Icon icon={props.icon} />
           <div className="forecast-temperature">14°</div>
         </div>
         <div className="col-sm-2">
           <div className="forecast-day">Sun</div>
-          <Icon type="rainy" />
+          <Icon icon={props.icon} />
           <div className="forecast-temperature">8°</div>
         </div>
         <div className="col-sm-2">
           <div className="forecast-day">Mon</div>
-          <Icon type="rainy" />
+          <Icon icon={props.icon} />
           <div className="forecast-temperature">7°</div>
         </div>
         <div className="col-sm-2">
           <div className="forecast-day">Tue</div>
-          <Icon type="sunny" />
+          <Icon icon={props.icon} />
           <div className="forecast-temperature">11°</div>
         </div>
       </div>

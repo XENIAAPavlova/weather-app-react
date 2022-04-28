@@ -10,6 +10,7 @@ export default function Weather() {
   let [description, setDescription] = useState(null);
   let [humidity, setHumidity] = useState(null);
   let [wind, setWind] = useState(null);
+  let [icon, setIcon] = useState(null);
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -30,6 +31,7 @@ export default function Weather() {
     setDescription(response.data.weather[0].description);
     setHumidity(response.data.main.humidity);
     setWind(response.data.wind.speed);
+    setIcon(response.data.weather[0].icon);
 
     setReady(true);
   }
@@ -76,6 +78,7 @@ export default function Weather() {
                               description={description}
                               humidity={humidity}
                               wind={wind}
+                              icon={icon}
                             />
                           </div>{" "}
                         </div>
