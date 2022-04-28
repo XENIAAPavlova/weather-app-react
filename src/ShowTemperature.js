@@ -10,16 +10,16 @@ export default function ShowTemperature(props) {
   return (
     <div className="weather-details">
       <div className="row weather-header align-items-center main-current-weather">
-        <div className="col mt-5 mb-3 city-temp text-center">
+        <div className="col-8 mt-5 mb-3 city-temp text-center">
           <h1>{props.city}</h1>
-          <h3>{Math.round(props.temperature)} °C </h3>
+          <h3>{Math.round(props.temperature)} °C | °F </h3>
         </div>
-        <div className="col-4 mb-2 weather-icon text-start">
+        <div className="col-4 mt-4 mb-2 weather-icon text-start">
           <Icon icon={props.icon} size={80} color={"#4E944F"} />
         </div>
       </div>
       <div className="text-center mt-4 summary-current-weather">
-        <div className="row text-center">
+        <div className="row text-center detailed-description">
           <div className="col-sm-6 current-time">
             <CurrentDate date={props.currentDate} />
           </div>
@@ -27,7 +27,7 @@ export default function ShowTemperature(props) {
             Humidity: {props.humidity} %
           </div>
         </div>
-        <div className="row text-center mb-5">
+        <div className="row text-center mb-5 detailed-description">
           <div className="col-sm-6 weather-summary text-capitalize">
             {props.description}
           </div>

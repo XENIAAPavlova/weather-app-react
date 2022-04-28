@@ -32,6 +32,10 @@
   font-size: 14px;
 }
 
+.detailed-description {
+  color: #167247;
+}
+
 .main-current-weather {
   font-size: large;
 }
