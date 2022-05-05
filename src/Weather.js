@@ -11,6 +11,7 @@ export default function Weather() {
   let [humidity, setHumidity] = useState(null);
   let [wind, setWind] = useState(null);
   let [icon, setIcon] = useState(null);
+  let [unit, setUnit] = useState("cilsius");
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -32,6 +33,7 @@ export default function Weather() {
     setHumidity(response.data.main.humidity);
     setWind(response.data.wind.speed);
     setIcon(response.data.weather[0].icon);
+    setUnit(response.data.temperature);
 
     setReady(true);
   }

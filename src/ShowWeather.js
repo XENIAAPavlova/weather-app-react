@@ -1,8 +1,9 @@
 import React from "react";
 import Icon from "./Icon";
 import CurrentDate from "./CurrentDate";
+import ShowTemperature from "./ShowTemperature";
 
-export default function ShowTemperature(props) {
+export default function ShowWeather(props) {
   if (props.temperature === null) {
     return null;
   }
@@ -12,7 +13,7 @@ export default function ShowTemperature(props) {
       <div className="row weather-header align-items-center main-current-weather">
         <div className="col-8 mt-5 mb-3 city-temp text-center">
           <h1>{props.city}</h1>
-          <h3>{Math.round(props.temperature)} °C | °F </h3>
+          <ShowTemperature />
         </div>
         <div className="col-4 mt-4 mb-2 weather-icon text-start">
           <Icon icon={props.icon} size={80} color={"#4E944F"} />
