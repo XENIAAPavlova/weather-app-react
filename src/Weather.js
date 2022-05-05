@@ -11,7 +11,7 @@ export default function Weather() {
   let [humidity, setHumidity] = useState(null);
   let [wind, setWind] = useState(null);
   let [icon, setIcon] = useState(null);
-  let [unit, setUnit] = useState("cilsius");
+  let [unit, setUnit] = useState("celsius");
 
   function handleSubmit(event) {
     event.preventDefault();
