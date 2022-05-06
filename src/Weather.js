@@ -6,6 +6,7 @@ export default function Weather() {
   const [ready, setReady] = useState(false);
   let [currentDate, setCurrentDate] = useState(null);
   let [city, setCity] = useState("Lisbon");
+  let [searchQuery, setSearchQuery] = useState(null);
   let [temperature, setTemperature] = useState(null);
   let [description, setDescription] = useState(null);
   let [humidity, setHumidity] = useState(null);
@@ -16,18 +17,19 @@ export default function Weather() {
   function handleSubmit(event) {
     event.preventDefault();
     const apiKey = "dcfba56f795371b9b39f70882499c480";
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${searchQuery}&appid=${apiKey}&units=metric`;
     axios.get(url).then(handleApiResponse);
   }
 
   function updateCity(event) {
-    setCity(event.target.value);
+    setSearchQuery(event.target.value);
   }
 
   function handleApiResponse(response) {
     console.log(response);
     setCurrentDate(new Date(response.data.dt * 1000));
     setCity(response.data.name);
+    setSearchQuery(response.data.name);
     setTemperature(response.data.main.temp);
     setDescription(response.data.weather[0].description);
     setHumidity(response.data.main.humidity);
