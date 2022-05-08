@@ -23,7 +23,7 @@ export default function Icon(props) {
     "50n": "FOG",
   };
 
-  let size = props.size || 50;
+  let size = props.size || 35;
 
   return (
     <ReactAnimatedWeather

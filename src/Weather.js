@@ -14,6 +14,7 @@ export default function Weather() {
   let [wind, setWind] = useState(null);
   let [icon, setIcon] = useState(null);
   let [unit, setUnit] = useState("celsius");
+  let [coordinates, setCoordinates] = useState(null);
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -37,6 +38,7 @@ export default function Weather() {
     setWind(response.data.wind.speed);
     setIcon(response.data.weather[0].icon);
     setUnit(response.data.temperature);
+    setCoordinates(response.data.coord);
 
     setReady(true);
   }
@@ -85,7 +87,10 @@ export default function Weather() {
                               wind={wind}
                               icon={icon}
                             />
-                            <WeatherForecast icon={icon} />
+                            <WeatherForecast
+                              icon={icon}
+                              coordinates={coordinates}
+                            />
                           </div>{" "}
                         </div>
                       </div>

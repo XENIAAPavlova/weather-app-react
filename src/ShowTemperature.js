@@ -21,17 +21,19 @@ export default function ShowTemperature(props) {
     return (
       <div className="ShowTemperature">
         <span className="temperature">
-          <h3>{Math.round(props.celsius)}</h3>
-          <span className="unit text-center fs-4">
-            °C|
-            <a
-              style={{ textDecoration: "none" }}
-              href="/"
-              onClick={showFahrenheit}
-            >
-              °F
-            </a>
-          </span>
+          <h3>
+            {Math.round(props.celsius)}
+            <span className="unit text-center fs-5 fw-normal">
+              °C|
+              <a
+                style={{ textDecoration: "none" }}
+                href="/"
+                onClick={showFahrenheit}
+              >
+                °F
+              </a>
+            </span>
+          </h3>
         </span>
       </div>
     );
@@ -39,17 +41,19 @@ export default function ShowTemperature(props) {
     return (
       <div className="ShowTemperature">
         <span className="temperature">
-          <h3>{Math.round(fahrenheit())}</h3>
-          <span className="unit text-center fs-4">
-            <a
-              style={{ textDecoration: "none" }}
-              href="/"
-              onClick={showCelsius}
-            >
-              °C
-            </a>
-            |°F
-          </span>
+          <h3>
+            {Math.round(fahrenheit())}
+            <span className="unit text-center fs-5 fw-normal">
+              <a
+                style={{ textDecoration: "none" }}
+                href="/"
+                onClick={showCelsius}
+              >
+                °C
+              </a>
+              |°F
+            </span>
+          </h3>
         </span>
       </div>
     );

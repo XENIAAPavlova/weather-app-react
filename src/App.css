@@ -33,7 +33,8 @@
 }
 
 .detailed-description {
-  color: #167247;
+  color: black;
+  opacity: 0.6;
 }
 
 .main-current-weather {
@@ -43,10 +44,11 @@
 .unit {
   text-align: center;
   font-size: large;
+  padding-left: 10px;
 }
 
 .forecast-temperature-min {
-  opacity: 0.6;
+  opacity: 0.5;
 }
 /* 
 .forecast-day {

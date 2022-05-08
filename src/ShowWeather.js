@@ -12,7 +12,7 @@ export default function ShowWeather(props) {
     <div className="weather-details">
       <div className="row weather-header align-items-center main-current-weather">
         <div className="col-8 mt-5 mb-3 city-temp text-center">
-          <h1>{props.city}</h1>
+          <div className="city-name fs-1 fw-normal">{props.city}</div>
           <ShowTemperature celsius={props.temperature} />
         </div>
         <div className="col-4 mt-4 mb-2 weather-icon text-start">
