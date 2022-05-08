@@ -15,7 +15,7 @@ function App() {
               target="_blank"
               rel="noreferrer"
             >
-              open-source code
+              open-source code.
             </a>
           </div>
         </div>

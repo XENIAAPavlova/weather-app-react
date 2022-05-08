@@ -35,33 +35,6 @@ export default function ShowWeather(props) {
           <div className="col-sm-6 current-time">Wind: {props.wind} km/h</div>
         </div>
       </div>
-      <div className="row mt-5 mb-2 justify-content-center">
-        <div className="col-sm-2">
-          <div className="forecast-day">Fri</div>
-          <Icon icon={props.icon} size={52} />
-          <div className="forecast-temperature">14°</div>
-        </div>
-        <div className="col-sm-2">
-          <div className="forecast-day">Sat</div>
-          <Icon icon={props.icon} />
-          <div className="forecast-temperature">14°</div>
-        </div>
-        <div className="col-sm-2">
-          <div className="forecast-day">Sun</div>
-          <Icon icon={props.icon} />
-          <div className="forecast-temperature">8°</div>
-        </div>
-        <div className="col-sm-2">
-          <div className="forecast-day">Mon</div>
-          <Icon icon={props.icon} />
-          <div className="forecast-temperature">7°</div>
-        </div>
-        <div className="col-sm-2">
-          <div className="forecast-day">Tue</div>
-          <Icon icon={props.icon} />
-          <div className="forecast-temperature">11°</div>
-        </div>
-      </div>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import ShowWeather from "./ShowWeather";
+import WeatherForecast from "./WeatherForecast";
 
 export default function Weather() {
   const [ready, setReady] = useState(false);
@@ -84,6 +85,7 @@ export default function Weather() {
                               wind={wind}
                               icon={icon}
                             />
+                            <WeatherForecast icon={icon} />
                           </div>{" "}
                         </div>
                       </div>

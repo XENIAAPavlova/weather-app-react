@@ -45,6 +45,14 @@
   font-size: large;
 }
 
+.forecast-temperature-min {
+  opacity: 0.6;
+}
+/* 
+.forecast-day {
+
+} */
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
