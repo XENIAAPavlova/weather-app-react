@@ -21,7 +21,6 @@ export default function ForecastDay(props) {
     return days[day];
   }
 
-  console.log("debuggg forecast day");
   console.log(props.data);
 
   return (
