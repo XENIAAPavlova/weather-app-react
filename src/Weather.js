@@ -18,7 +18,7 @@ export default function Weather() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    const apiKey = "9a6f70e2dcf8c5ad379723398a51a240";
+    const apiKey = "644d229ac57327a321e9ff74a30c10c1";
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${searchQuery}&appid=${apiKey}&units=metric`;
     axios.get(url).then(handleApiResponse);
   }
@@ -28,7 +28,6 @@ export default function Weather() {
   }
 
   function handleApiResponse(response) {
-    console.log(response);
     setCurrentDate(new Date(response.data.dt * 1000));
     setCity(response.data.name);
     setSearchQuery(response.data.name);
@@ -91,7 +90,7 @@ export default function Weather() {
                               icon={icon}
                               coordinates={coordinates}
                             />
-                          </div>{" "}
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -104,7 +103,7 @@ export default function Weather() {
       </div>
     );
   } else {
-    const apiKey = "9a6f70e2dcf8c5ad379723398a51a240";
+    const apiKey = "644d229ac57327a321e9ff74a30c10c1";
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(url).then(handleApiResponse);
     return "Loading...";
