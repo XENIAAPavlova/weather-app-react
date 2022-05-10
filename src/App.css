@@ -44,15 +44,16 @@
 .unit {
   text-align: center;
   font-size: large;
-  padding-left: 10px;
+  font-size: 0.9rem;
+  vertical-align: text-top;
 }
 
 .forecast-temperature-min {
   opacity: 0.5;
 }
-/* 
-.forecast-day {
 
+/* h3 {
+  font-size: 2.75rem;
 } */
 
 @keyframes App-logo-spin {
